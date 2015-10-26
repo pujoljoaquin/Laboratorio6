@@ -1,0 +1,23 @@
+<h1>Listado de Victimas</h1>
+<table class="table">
+
+	<tr>
+		<th> Nombre </th>
+		<th> Edad </th>
+		<th> Monstruo </th>
+	</tr>
+
+	<% victimas = Victima.all %>
+	<% victimas.each do |victima| %>
+		<tr>
+			<td> <%= victima.nombre %> </td>
+			<td> <%= victima.edad %> </td>
+			<td> <%= Monstruo.find(victima.monstruo_id).nombre %> </td>
+		</tr>
+	<% end %>
+
+	<% if victimas.size == 0 %>
+		<tr> <td colspan="3"> No hay victimas </td> </tr>
+	<% end %>
+
+</table>
