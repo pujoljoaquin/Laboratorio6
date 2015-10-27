@@ -16,8 +16,8 @@
 			<td> <%= monstruo.descripcion %> </td>
 			<td> <%= (monstruo.critter_star) ? 'Si' : 'No' %> </td>
 			<td>
-				<%= link_to "Editar", edit_monstruo_path(monstruo), class: 'btn btn-info btn-sm' %>
-				<%= link_to "Eliminar", monstruo, method: :delete, class: 'btn btn-danger btn-sm' %>
+				<%= link_to "Editar/Edit", edit_monstruo_path(monstruo), class: 'btn btn-info btn-sm' %>
+				<%= link_to "Eliminar/Delete", monstruo, method: :delete, class: 'btn btn-danger btn-sm' %>
 			</td>
 		</tr>
 	<% end %>
